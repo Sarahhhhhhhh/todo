@@ -13,7 +13,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import com.dse.User;
 
 
-
 public class SerializedUserDAO implements UserDAO{
 	
 	private static SerializedUserDAO instance;
@@ -27,7 +26,7 @@ public class SerializedUserDAO implements UserDAO{
 			readOutFile();
 		}
 		readFile();
-	}	
+	}
 	
 	@Override
 	public ArrayList<User> getAllUsers() {
@@ -45,15 +44,15 @@ public class SerializedUserDAO implements UserDAO{
 		return null;
 	}
 
-	@Autowired
+	
 	@Override
 	public void saveUser(User user) {
 		String id = user.getEmail();
 			if(users.stream().filter(t -> t.getEmail().equals(id)) != null) {
 				System.out.println("User allready exists with that ID");
 			}else {
-		this.users.add(user);
-		readOutFile();
+				this.users.add(user);
+				readOutFile();
 			}
 	}
 
@@ -81,6 +80,7 @@ public class SerializedUserDAO implements UserDAO{
 		
 	}
 	
+	//used to suppress warning generated due to unchecked casting
 	@SuppressWarnings("unchecked")
 	public void readFile() {
 		ObjectInputStream ois = null;
@@ -111,6 +111,7 @@ public class SerializedUserDAO implements UserDAO{
 		}
 	}
 	
+	
 	public void readOutFile() {
 		ObjectOutputStream oos = null;
 		try {
@@ -130,7 +131,6 @@ public class SerializedUserDAO implements UserDAO{
 				System.exit(1);
 			}
 		}
-		
 	}
 	
 	public static SerializedUserDAO getInstance() {
@@ -139,5 +139,4 @@ public class SerializedUserDAO implements UserDAO{
 		}
 		return instance;
 	}
-
 }

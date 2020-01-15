@@ -5,11 +5,10 @@ public class ResponseID {
 private String response;
  
 public String getResponse() {
-  return response;
-  }
+	return response;
+ }
 
  public void setResponse(String response) {
-	 
-  this.response = response;
-  }
+	 this.response = response;
+ }
 }

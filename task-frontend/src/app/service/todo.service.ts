@@ -33,4 +33,10 @@ export class TodoService {
       return;
     });
   }
+
+  public deleteTodo(listId: number, taskId: number): Promise<void> {
+    return this.http.delete(environment.backendUrl + 'lists/' + listId + '/tasks/' + taskId).toPromise().then((resp: any) => {
+      return;
+    });
+  }
 }

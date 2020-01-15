@@ -78,5 +78,17 @@
   </mat-form-field>
   <button mat-button (click)="createTodo()">Create task</button>
 </div>
+
+  <div>
+    <p>Delete todo</p>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="ListId" name="deleteListId" [(ngModel)]="deleteListId">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="TodoId" name="deleteTodoId" [(ngModel)]="deleteTodoId">
+    </mat-form-field>
+    <button mat-button (click)="deleteTodo()">Delete todo</button>
+  </div>
+
 </div>
 <router-outlet></router-outlet>

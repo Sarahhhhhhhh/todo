@@ -66,19 +66,8 @@ public class ToDoListController {
 		service.updateTaskText(listID, taskID);
 	}
 	
-	//Sends all the lists from a specific user to the service which requested the lists
-	@RequestMapping(value = "/{user}", method = RequestMethod.GET)
-	public Collection<ToDoList> getListsWithSameUser(@PathVariable("user") String user) {
-		return service.getListsWithSameUser(user);
-	}
 	
-	//Sends all the lists from a specific user to the service which requested the lists
-		@RequestMapping(value = "/user", method = RequestMethod.POST)
-		public Collection<ToDoList> getListsWithSamBeUserName(@RequestBody String user) {
-			return service.getListsWithSameUser(user);
-		}
-	
-	//Deletes a specific list when requested from some other service and sends all the lists from
+	/*//Deletes a specific list when requested from some other service and sends all the lists from
 	//a specific user as a response to the service which requested the deletion
 	@RequestMapping(value = "/lists/{id}", method = RequestMethod.DELETE)
 	public ResponseEntity<String> deleteListById(@PathVariable("id") int id) throws JsonProcessingException {
@@ -92,8 +81,8 @@ public class ToDoListController {
 	@RequestMapping(value = "/lists", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<String> addList(@RequestBody ToDoList todolist) throws JsonProcessingException {	
 		service.addList(todolist);
-		return new ResponseEntity<String>(mapper.writeValueAsString(service.getListsWithSameUser(todolist.getUser())), null, HttpStatus.CREATED);
-	}
+		return new ResponseEntity<String>(mapper.writeValueAsString(service.getListsWithSameUser(), null, HttpStatus.CREATED);
+	}*/
 	
 	//Updates the list when requested from some other service and sends all the lists from a specific user
 	//as a response to the service which requested the update 

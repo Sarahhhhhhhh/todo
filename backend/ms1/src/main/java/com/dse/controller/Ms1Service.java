@@ -1,4 +1,6 @@
 package com.dse.controller;
+
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -31,7 +33,7 @@ public class Ms1Service {
 			new User ("Jakub", "Gawrylkowicz","jakub@gmail.com",  "Jakub123", new ArrayList<String> (Arrays.asList("88888"))		
 			)));
 	
-	public List<User> getAllUsers(){
+	public List <User> getAllUsers(){
 		return users;
 	}
 	
@@ -112,6 +114,16 @@ public class Ms1Service {
 		}System.out.println(emails);
 			return emails;
 	}
+	//not needed 
+	/*//Used to inform ms4 email of all users with authorisation for given ToDo List id
+		public void notifyMs4(ArrayList<String> emails) throws JsonProcessingException {
+			restTemplate = new RestTemplate();
+			headers = new HttpHeaders();
+	        headers.setContentType(MediaType.APPLICATION_JSON);
+	        entity = new HttpEntity<String>(mapper.writeValueAsString(emails), headers);
+	        response = restTemplate.exchange("10.102.107.17:8080/uemails" , HttpMethod.POST, entity, String.class);
+	        System.out.println(response.getBody());
+		}*/
 	        
 	public void deleteUser(String id) {
 		users.removeIf(t -> t.getEmail().equals(id));
@@ -153,7 +165,7 @@ public class Ms1Service {
 					}
 				}
 				if (temp != -1) {
-					u.getTodolistsId().remove(temp);
+					u.getTodolistsId().remove(temp); //jebem mu mater!
 				}
 			}
 		}

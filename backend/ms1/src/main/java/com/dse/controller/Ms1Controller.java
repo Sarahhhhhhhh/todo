@@ -1,4 +1,5 @@
 package com.dse.controller;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,9 +16,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.dse.ResponseMS2;
 import com.dse.User;
 import com.fasterxml.jackson.core.JsonProcessingException;
-
-//@CrossOrigin(origins = "*")
-//@RestController
+@CrossOrigin(origins = "*")
+@RestController
 public class Ms1Controller {
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
@@ -82,12 +82,12 @@ public class Ms1Controller {
 	
 	@RequestMapping(value="/test", method= RequestMethod.POST)
 	public String test() {
-		return "Test!";
+		return "Lude Pecurke!!!";
 	}
 	
 	@RequestMapping(value="/route", method= RequestMethod.GET)
-	public String something() {
-		return "Smth";
+	public String pusiga() {
+		return "pusi ga";
 	}
 	@RequestMapping(value = "/ha", method = RequestMethod.POST)
 	 public String ha() throws JsonProcessingException{

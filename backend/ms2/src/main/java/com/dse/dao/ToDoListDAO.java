@@ -23,6 +23,15 @@ public class ToDoListDAO {
 		throw new IllegalArgumentException("The list with this id doesn't exist");
 	}
 	
+	//Returns all the lists that a specific user has
+	public Collection<ToDoList> getListsWithSameUser(String user) {
+		ArrayList<ToDoList> sameUser = new ArrayList<ToDoList>();
+		for(ToDoList list : todolists) {
+			if(list.getUser().equals(user))
+				sameUser.add(list);
+		}	
+		return sameUser;
+	}
 
 	public void deleteListById(int id) {
 		for(Iterator<ToDoList> iter = this.getAllToDoLists().iterator(); iter.hasNext();) {

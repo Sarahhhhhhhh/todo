@@ -76,18 +76,18 @@ public class Ms1Controller {
 		ms1service.deleteUser(id);
 	}
 	@RequestMapping(value ="/login", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<String> verifyUser(@RequestBody User user) {
+	public ResponseEntity<?> verifyUser(@RequestBody User user) {
 		return new ResponseEntity<>(ms1service.verifyUser(user.getEmail(), user.getPassword()));
 	}
 	
 	@RequestMapping(value="/test", method= RequestMethod.POST)
 	public String test() {
-		return "Lude Pecurke!!!";
+		return "Test!";
 	}
 	
 	@RequestMapping(value="/route", method= RequestMethod.GET)
-	public String pusiga() {
-		return "pusi ga";
+	public String test2() {
+		return "Test2";
 	}
 	@RequestMapping(value = "/ha", method = RequestMethod.POST)
 	 public String ha() throws JsonProcessingException{

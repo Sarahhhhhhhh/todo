@@ -10,7 +10,7 @@ public class ToDoList {
 	private String title;
 	private ArrayList<ToDoTask> todos = new ArrayList<ToDoTask>();
 	private String description;
-	//ToDoListManagement is used to manage the incrementation of the listID
+	
 	private static ToDoListManagement management = ToDoListManagement.getInstance();
 	
 	public ToDoList() {}

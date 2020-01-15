@@ -1,7 +1,7 @@
 package com.dse.task;
 
 public class ToDoTask {
-	//taskID still has no use, but there for possible future needs
+
 	private int taskID;
 	private String text;
 	private String date;

@@ -13,7 +13,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import com.dse.User;
 
 
-
 public class SerializedUserDAO implements UserDAO{
 	
 	private static SerializedUserDAO instance;

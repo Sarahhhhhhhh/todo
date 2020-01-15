@@ -5,14 +5,12 @@ import java.util.ArrayList;
 
 @SuppressWarnings("serial")
 public class User implements Serializable{
-	//email serves as user ID , userNAME and email
-	private String name, lastName, email, password;
 	
+	private String name, lastName, email, password;
 	private ArrayList<String> todolistsId = new ArrayList<>();
 	
-	public User () {
-		
-	}
+	public User () {}
+	
 	public User(String name, String lastname, String email, String password, ArrayList<String> todolistsId) {
 		super();
 		this.setEmail(email);

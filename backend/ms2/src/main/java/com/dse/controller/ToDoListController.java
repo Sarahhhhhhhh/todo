@@ -41,12 +41,7 @@ public class ToDoListController {
 	public ResponseEntity<String> getAllListTasks(@PathVariable("id") int id) throws JsonProcessingException {
 		return new ResponseEntity<String>(mapper.writeValueAsString(service.getListById(id).getTodos()), null, HttpStatus.OK);
 	}
-	
-	//sends a specific task from a specific list to the service which requested it
-	/*@requestmapping(value = "/lists/{id}/tasks/{taskid}", method = requestmethod.get)
-	public responseentity<string> getlisttaskbyid(@pathvariable("id") int id, @pathvariable("taskid") int taskid) throws jsonprocessingexception {
-		return new responseentity<string>(mapper.writevalueasstring(service.getlistbyid(id).gettodos().get(taskid)), null, httpstatus.ok);
-	}*/
+
 	
 	//Adds the task to the specific list when requested from some other service
 	@RequestMapping(value = "/lists/{id}/tasks", method = RequestMethod.POST)

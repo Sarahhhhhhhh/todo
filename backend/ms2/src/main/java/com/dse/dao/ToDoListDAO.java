@@ -52,12 +52,10 @@ public class ToDoListDAO {
 		todolists.set(listID, todolist);
 	}
 	
-	//works but is not in use. Here for possible needs in the future
 	public void addTask(int listID, ToDoTask task) {
 		this.getListById(listID).getTodos().add(task);
 	}
 	
-	//works but is not in use. Here for possible needs in the future
 	public void deleteTask(int listID, int taskID) {
 		for(Iterator<ToDoTask> iter = this.getListById(listID).getTodos().iterator(); iter.hasNext();) {
 			ToDoTask task = iter.next();
@@ -65,7 +63,6 @@ public class ToDoListDAO {
 		}
 	}
 	
-	//works but is not in use. Here for possible needs in the future
 	public void updateTaskText(int listID, int taskID, String text) {
 		for(int i = 0; i < this.getListById(listID).getTodos().size(); i++)
 			if(this.getListById(listID).getTodos().get(i).getTaskID() == taskID)

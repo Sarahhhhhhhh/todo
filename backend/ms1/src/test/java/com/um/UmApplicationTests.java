@@ -1,4 +1,4 @@
-package com.dse;
+package com.um;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class Ms1ApplicationTests {
+public class UmApplicationTests {
 
 	@Test
 	public void contextLoads() {

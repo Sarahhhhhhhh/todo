@@ -67,8 +67,7 @@ public class ToDoListController {
 		return service.getListsWithSameUser(user);
 	}
 	
-	//Sends all the lists from a specific user to the service which requested the lists
-		@RequestMapping(value = "/user", method = RequestMethod.POST)
+	@RequestMapping(value = "/user", method = RequestMethod.POST)
 		public Collection<ToDoList> getListsWithSamBeUserName(@RequestBody String user) {
 			return service.getListsWithSameUser(user);
 		}

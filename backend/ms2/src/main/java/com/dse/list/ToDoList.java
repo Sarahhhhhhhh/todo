@@ -5,6 +5,8 @@ import com.dse.ToDoListManagement;
 import com.dse.task.ToDoTask;
 
 public class ToDoList {
+	
+	//member variables
 	private int id;
 	private String user;
 	private String title;
@@ -23,6 +25,7 @@ public class ToDoList {
 		this.description = description;
 	}
 
+	//getters, setters
 	public String getUser() {
 		return user;
 	}

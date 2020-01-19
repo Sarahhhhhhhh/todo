@@ -1554,3 +1554,25 @@ org.eclipse.core.runtime.CoreException: Launch configuration UmServiceTest refer
 2020-01-19 10:45:33,686 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2020-01-19 10:45:33,686 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\smirkovic\Desktop\todo\backend\ms2\src\main\resources
 2020-01-19 10:45:33,686 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\smirkovic\Desktop\todo\backend\ms2\src\main\resources
+2020-01-19 10:45:33,687 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-01-19 10:45:33,687 [Worker-39: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\smirkovic\Desktop\todo\backend\ms2\src\test\resources
+2020-01-19 10:52:37,761 [Worker-43: Importing Maven projects] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.um:um:0.0.1-SNAPSHOT @ C:\Users\smirkovic\Desktop\todo\backend\usermanagement\pom.xml.
+2020-01-19 10:52:38,000 [Worker-43: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /um/src/main/java
+2020-01-19 10:52:38,001 [Worker-43: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /um/src/main/resources
+2020-01-19 10:52:38,003 [Worker-43: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /um/src/main/resources
+2020-01-19 10:52:38,006 [Worker-43: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /um/src/test/java
+2020-01-19 10:52:38,007 [Worker-43: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /um/src/test/resources
+2020-01-19 10:52:38,093 [Worker-43: Importing Maven projects] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 0 sec
+2020-01-19 10:52:38,754 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-01-19 10:52:38,755 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-01-19 10:52:38,763 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-01-19 10:52:38,768 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-01-19 10:52:38,768 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-01-19 10:53:20,102 [Worker-40: Importing Maven projects] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.todo:todo:0.0.1 @ C:\Users\smirkovic\Desktop\todo\backend\todo\pom.xml.
+2020-01-19 10:53:20,365 [Worker-40: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /todo/src/main/java
+2020-01-19 10:53:20,368 [Worker-40: Importing Maven projects] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /todo/src/test/java
+2020-01-19 10:53:20,473 [Worker-40: Importing Maven projects] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 0 sec
+2020-01-19 10:53:21,049 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-01-19 10:53:21,049 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\smirkovic\Desktop\todo\backend\todo\src\main\resources
+2020-01-19 10:53:21,049 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\smirkovic\Desktop\todo\backend\todo\src\main\resources
+2020-01-19 10:53:21,051 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.

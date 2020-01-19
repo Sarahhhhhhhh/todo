@@ -7,6 +7,7 @@ import java.util.Optional;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +16,9 @@ import com.um.model.User;
 
 @Service
 public class UserService {
+
+	@Autowired
+	private SessionService sessionService;
 
 	private List<User> users;
 
@@ -72,26 +76,6 @@ public class UserService {
 		}
 	}
 
-	public void updateTodoID(String email, String id) {
-		for (int i = 0; i < users.size(); i++) {
-			User u = users.get(i);
-			if (u.getEmail().equals(email)) {
-				if (u.getTodolistsId().size() == 0) {
-					logger.info("todo Id added");
-					u.addTodoIDs(id);
-					return;
-				}
-				for (int j = 0; j < u.getTodolistsId().size(); j++) {
-					if (!u.getTodolistsId().get(j).equals(id)) {
-						logger.info("todo Id added");
-						u.addTodoIDs(id);
-						return;
-					}
-				}
-			}
-		}
-	}
-
 	public ArrayList<String> todoIdCheck(String id) throws JsonProcessingException {
 		ArrayList<String> emails = new ArrayList<>();
 		for (int i = 0; i < users.size(); i++) {
@@ -121,6 +105,7 @@ public class UserService {
 				verify = 10;
 				logger.info("User verified, ToDoLists ID's user is authorised to acces: "
 						+ getUser(email).getTodolistsId());
+				this.sessionService.addUser(u);
 				return HttpStatus.OK;
 			}
 		}

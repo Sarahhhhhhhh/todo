@@ -54,6 +54,13 @@ public class ToDoListController {
 		service.deleteTask(listID, taskID);
 	}
 
+	@RequestMapping(value = "/lists/{id}/tasks/{taskID}", method = RequestMethod.GET)
+	public ResponseEntity<String> getTaskById(@PathVariable("id") String listID, @PathVariable("taskID") int taskID)
+			throws JsonProcessingException {
+		return new ResponseEntity<String>(mapper.writeValueAsString(service.getListTaskById(listID, taskID)), null,
+				HttpStatus.OK);
+	}
+
 	@RequestMapping(value = "/lists/{id}/tasks/{taskID}", method = RequestMethod.PUT)
 	public void updateTask(@PathVariable("id") String listID, @PathVariable("taskID") int taskID)
 			throws JsonProcessingException {

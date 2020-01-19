@@ -1624,3 +1624,6 @@ org.eclipse.core.runtime.CoreException: Launch configuration UmServiceTest refer
 2020-01-19 10:58:41,679 [Worker-43: Launching Executing install in C__Users_smirkovic_Desktop_todo_backend_usermanagement] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B install
 2020-01-19 10:59:02,813 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2020-01-19 10:59:02,814 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-01-19 10:59:02,814 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-01-19 10:59:02,815 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-01-19 10:59:02,816 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource

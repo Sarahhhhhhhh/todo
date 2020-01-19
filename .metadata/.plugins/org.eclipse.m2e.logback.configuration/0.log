@@ -1576,3 +1576,51 @@ org.eclipse.core.runtime.CoreException: Launch configuration UmServiceTest refer
 2020-01-19 10:53:21,049 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\smirkovic\Desktop\todo\backend\todo\src\main\resources
 2020-01-19 10:53:21,049 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\smirkovic\Desktop\todo\backend\todo\src\main\resources
 2020-01-19 10:53:21,051 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-01-19 10:53:21,052 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\smirkovic\Desktop\todo\backend\todo\src\test\resources
+2020-01-19 10:55:45,078 [Worker-49: Launching Executing install in C__Users_smirkovic_Desktop_todo_backend_todo] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\smirkovic\Desktop\todo\backend\todo
+2020-01-19 10:55:45,079 [Worker-49: Launching Executing install in C__Users_smirkovic_Desktop_todo_backend_todo] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B install
+2020-01-19 10:55:49,652 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-01-19 10:55:49,652 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\smirkovic\Desktop\todo\backend\todo\src\main\resources
+2020-01-19 10:55:49,652 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\smirkovic\Desktop\todo\backend\todo\src\main\resources
+2020-01-19 10:55:49,653 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-01-19 10:55:49,653 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\smirkovic\Desktop\todo\backend\todo\src\test\resources
+2020-01-19 10:56:23,037 [Worker-43: Launching Executing install in C__Users_smirkovic_Desktop_todo_backend_usermanagement] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\smirkovic\Desktop\todo\backend\usermanagement
+2020-01-19 10:56:23,037 [Worker-43: Launching Executing install in C__Users_smirkovic_Desktop_todo_backend_usermanagement] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B install
+2020-01-19 10:56:26,103 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-01-19 10:56:26,106 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-01-19 10:56:26,107 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-01-19 10:56:26,109 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-01-19 10:56:26,110 [Worker-52: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-01-19 10:58:12,042 [Worker-53: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.todo:todo:0.0.1 @ C:\Users\smirkovic\Desktop\todo\backend\todo\pom.xml.
+2020-01-19 10:58:12,265 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-01-19 10:58:12,266 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\smirkovic\Desktop\todo\backend\todo\src\main\resources
+2020-01-19 10:58:12,266 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\smirkovic\Desktop\todo\backend\todo\src\main\resources
+2020-01-19 10:58:12,267 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-01-19 10:58:12,267 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\smirkovic\Desktop\todo\backend\todo\src\test\resources
+2020-01-19 10:58:13,768 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-01-19 10:58:13,768 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\smirkovic\Desktop\todo\backend\todo\src\main\resources
+2020-01-19 10:58:13,768 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\smirkovic\Desktop\todo\backend\todo\src\main\resources
+2020-01-19 10:58:13,769 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-01-19 10:58:13,769 [Worker-41: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\smirkovic\Desktop\todo\backend\todo\src\test\resources
+2020-01-19 10:58:19,687 [Worker-43: Launching Executing install in C__Users_smirkovic_Desktop_todo_backend_todo] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\smirkovic\Desktop\todo\backend\todo
+2020-01-19 10:58:19,687 [Worker-43: Launching Executing install in C__Users_smirkovic_Desktop_todo_backend_todo] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B install
+2020-01-19 10:58:28,198 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-01-19 10:58:28,199 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\smirkovic\Desktop\todo\backend\todo\src\main\resources
+2020-01-19 10:58:28,199 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\smirkovic\Desktop\todo\backend\todo\src\main\resources
+2020-01-19 10:58:28,200 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-01-19 10:58:28,200 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\smirkovic\Desktop\todo\backend\todo\src\test\resources
+2020-01-19 10:58:36,810 [Worker-43: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.um:um:0.0.1-SNAPSHOT @ C:\Users\smirkovic\Desktop\todo\backend\usermanagement\pom.xml.
+2020-01-19 10:58:36,991 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-01-19 10:58:36,992 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-01-19 10:58:36,992 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-01-19 10:58:36,993 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-01-19 10:58:36,993 [Worker-43: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2020-01-19 10:58:38,396 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-01-19 10:58:38,396 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-01-19 10:58:38,405 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-01-19 10:58:38,407 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-01-19 10:58:38,407 [Worker-54: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-01-19 10:58:41,679 [Worker-43: Launching Executing install in C__Users_smirkovic_Desktop_todo_backend_usermanagement] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\smirkovic\Desktop\todo\backend\usermanagement
+2020-01-19 10:58:41,679 [Worker-43: Launching Executing install in C__Users_smirkovic_Desktop_todo_backend_usermanagement] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B install
+2020-01-19 10:59:02,813 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-01-19 10:59:02,814 [Worker-53: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource

@@ -1,4 +1,4 @@
-package com.dse.task;
+package com.todo.model;
 
 public class ToDoTask {
 

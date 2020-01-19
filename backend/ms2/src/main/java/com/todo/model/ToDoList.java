@@ -1,31 +1,29 @@
-package com.dse.list;
+package com.todo.model;
 
 import java.util.ArrayList;
-import com.dse.ToDoListManagement;
-import com.dse.task.ToDoTask;
+import java.util.UUID;
 
 public class ToDoList {
-	
-	//member variables
-	private int id;
+
+	// member variables
+	private String id;
 	private String user;
 	private String title;
 	private ArrayList<ToDoTask> todos = new ArrayList<ToDoTask>();
 	private String description;
-	
-	private static ToDoListManagement management = ToDoListManagement.getInstance();
-	
-	public ToDoList() {}
-	
+
+	public ToDoList() {
+	}
+
 	public ToDoList(String user, String title, ArrayList<ToDoTask> todos, String description) {
-		this.id = management.nextListID();
+		this.id = UUID.randomUUID().toString();
 		this.user = user;
 		this.title = title;
 		this.todos = todos;
 		this.description = description;
 	}
 
-	//getters, setters
+	// getters, setters
 	public String getUser() {
 		return user;
 	}
@@ -42,11 +40,11 @@ public class ToDoList {
 		this.todos = todos;
 	}
 
-	public int getId() {
+	public String getId() {
 		return id;
 	}
-	
-	public void setId(int id) {
+
+	public void setId(String id) {
 		this.id = id;
 	}
 
@@ -57,11 +55,11 @@ public class ToDoList {
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	
+
 	public String getDescription() {
 		return description;
 	}
-	
+
 	public void setDescription(String description) {
 		this.description = description;
 	}

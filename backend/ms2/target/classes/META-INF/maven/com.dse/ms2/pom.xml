@@ -5,7 +5,7 @@
 	<groupId>com.dse</groupId>
 	<artifactId>ms2</artifactId>
 	<version>0.0.1</version>
-	<name>DSE MS2</name>
+	<name>todo</name>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>

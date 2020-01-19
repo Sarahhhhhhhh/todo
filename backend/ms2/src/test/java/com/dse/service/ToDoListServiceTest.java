@@ -21,8 +21,9 @@ import org.springframework.test.web.client.ExpectedCount;
 import org.springframework.test.web.client.MockRestServiceServer;
 import org.springframework.web.client.RestTemplate;
 
-import com.dse.list.ToDoList;
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.todo.model.ToDoList;
+import com.todo.service.ToDoListService;
 
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration(classes = { SpringTestConfig.class })
@@ -46,18 +47,19 @@ class ToDoListServiceTest {
 				.andExpect(method(HttpMethod.DELETE))
 				.andRespond(withStatus(HttpStatus.OK).contentType(MediaType.TEXT_PLAIN).body("test"));
 
-		String result = this.service.notifyMs1(123);
+		String result = this.service.notifyMs1("123");
 		mockServer.verify();
 		assertEquals("test", result);
 	}
 
 	@Test
 	void notifyMs1PutTest() throws JsonProcessingException, URISyntaxException {
-		mockServer.expect(ExpectedCount.once(), requestTo(new URI("http://localhost:8080/todo/0")))
+		ToDoList list = new ToDoList("user", "123", null, "test");
+		mockServer.expect(ExpectedCount.once(), requestTo(new URI("http://localhost:8080/todo/" + list.getId())))
 				.andExpect(method(HttpMethod.PUT))
 				.andRespond(withStatus(HttpStatus.OK).contentType(MediaType.TEXT_PLAIN).body("test"));
 
-		String result = this.service.notifyMs1(new ToDoList("user", "123", null, "test"));
+		String result = this.service.notifyMs1(list);
 		mockServer.verify();
 		assertEquals("test", result);
 	}

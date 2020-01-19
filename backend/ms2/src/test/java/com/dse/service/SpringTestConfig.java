@@ -8,7 +8,7 @@ import org.springframework.web.client.RestTemplate;
 
 @Configuration
 @EnableAutoConfiguration
-@ComponentScan("com.dse")
+@ComponentScan("com.todo")
 public class SpringTestConfig {
 
 	@Bean

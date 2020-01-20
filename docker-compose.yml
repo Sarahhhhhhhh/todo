@@ -1,0 +1,19 @@
+web:
+    image: nginx:latest
+    ports:
+        - "80:80"
+    volumes:
+        - ./task-frontend/dist/task-frontend:/usr/share/nginx/html
+        - ./default.conf:/etc/nginx/conf.d/default.conf
+um:
+    build: ./backend/usermanagement/.
+    ports:
+        - "8080:8080"
+    volumes:
+        - ./backend/usermanagement/target:/code
+todo:
+    build: ./backend/todo/.
+    ports:
+        - "8081:8080"
+    volumes:
+        - ./backend/todo/target:/code

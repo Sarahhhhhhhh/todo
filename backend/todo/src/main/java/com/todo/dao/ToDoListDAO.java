@@ -29,10 +29,6 @@ public class ToDoListDAO {
 		return sameUser;
 	}
 
-	public void deleteListById(String id) {
-		this.todolists.remove(id);
-	}
-
 	public ToDoList addList(ToDoList todolist) {
 		ToDoList list = new ToDoList(todolist.getUser(), todolist.getTitle(), todolist.getTodos(),
 				todolist.getDescription());
@@ -43,6 +39,10 @@ public class ToDoListDAO {
 	public void updateList(String listID, ToDoList todolist) {
 		todolist.setId(listID);
 		this.todolists.put(listID, todolist);
+	}
+
+	public void deleteListById(String id) {
+		this.todolists.remove(id);
 	}
 
 	public void addTask(String listID, ToDoTask task) {

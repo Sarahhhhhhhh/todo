@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.um.model.User;
@@ -21,33 +20,28 @@ import com.um.service.UserService;
 public class UserController {
 
 	@Autowired
-	private UserService ms1service;
+	private UserService umService;
 	@Autowired
 	private SessionService sessionService;
 
 	@RequestMapping("/users/{id}")
 	public User getUser(@PathVariable String id) {
-		return ms1service.getUser(id);
+		return umService.getUser(id);
 	}
 
 	@RequestMapping(value = "/register", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<String> addUser(@RequestBody User user) {
-		return new ResponseEntity<>(ms1service.addUser(user));
+		return new ResponseEntity<>(umService.addUser(user));
 	}
 
 	@RequestMapping(value = "/users/{id}", method = RequestMethod.PUT)
 	public void updateUser(@RequestBody User user, @PathVariable String id) {
-		ms1service.updateUser(id, user);
-	}
-
-	@RequestMapping(value = "/todo/{id}", method = RequestMethod.DELETE)
-	public void deleteTodoID(@RequestParam("email") String email, @PathVariable String id) {
-		ms1service.deleteTodoID(email, id);
+		umService.updateUser(id, user);
 	}
 
 	@RequestMapping(value = "/login", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<?> verifyUser(@RequestBody User user) {
-		return new ResponseEntity<>(ms1service.verifyUser(user.getEmail(), user.getPassword()));
+		return new ResponseEntity<>(umService.verifyUser(user.getEmail(), user.getPassword()));
 	}
 
 	@RequestMapping(value = "/logout", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)

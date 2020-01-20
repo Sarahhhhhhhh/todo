@@ -3,9 +3,6 @@ package com.um.controller;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-
 import org.junit.jupiter.api.Test;
 import org.springframework.http.HttpStatus;
 
@@ -28,18 +25,6 @@ class UmServiceTest {
 	@Test
 	void getUserNotFoundtest() {
 		assertEquals(null, this.service.getUser("test"));
-	}
-
-	@Test
-	void addUserSuccesstest() {
-		assertEquals(HttpStatus.OK, this.service.addUser(
-				new User("newUser", "newUser", "newUser", "newUser", new ArrayList<String>(Arrays.asList("88888")))));
-	}
-
-	@Test
-	void addUserFailtest() {
-		assertEquals(HttpStatus.NO_CONTENT, this.service.addUser(new User("Jakub", "Gawrylkowicz", "jakub@gmail.com",
-				"Jakub123", new ArrayList<String>(Arrays.asList("88888")))));
 	}
 
 	@Test

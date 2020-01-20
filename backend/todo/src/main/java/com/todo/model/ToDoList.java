@@ -1,11 +1,11 @@
 package com.todo.model;
 
 import java.util.ArrayList;
-import java.util.UUID;
+
+import org.springframework.data.annotation.Id;
 
 public class ToDoList {
-
-	// member variables
+	@Id
 	private String id;
 	private String user;
 	private String title;
@@ -16,14 +16,12 @@ public class ToDoList {
 	}
 
 	public ToDoList(String user, String title, ArrayList<ToDoTask> todos, String description) {
-		this.id = UUID.randomUUID().toString();
 		this.user = user;
 		this.title = title;
 		this.todos = todos;
 		this.description = description;
 	}
 
-	// getters, setters
 	public String getUser() {
 		return user;
 	}

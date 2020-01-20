@@ -1,27 +1,27 @@
 package com.um.model;
 
 import java.io.Serializable;
-import java.util.ArrayList;
+
+import org.springframework.data.annotation.Id;
 
 @SuppressWarnings("serial")
 public class User implements Serializable {
-
+	@Id
+	private String id;
 	private String name;
 	private String lastName;
 	private String email;
 	private String password;
-	private ArrayList<String> todolistsId = new ArrayList<>();
 
 	public User() {
 	}
 
-	public User(String name, String lastname, String email, String password, ArrayList<String> todolistsId) {
+	public User(String name, String lastname, String email, String password) {
 		super();
 		this.setEmail(email);
 		this.setName(name);
 		this.setLastName(lastname);
 		this.setPassword(password);
-		this.setTodolistsId(todolistsId);
 	}
 
 	public String getName() {
@@ -48,24 +48,20 @@ public class User implements Serializable {
 		this.password = password;
 	}
 
-	public ArrayList<String> getTodolistsId() {
-		return todolistsId;
-	}
-
-	public void setTodolistsId(ArrayList<String> todolistsId) {
-		this.todolistsId = todolistsId;
-	}
-
-	public void addTodoIDs(String id) {
-		this.todolistsId.add(id);
-	}
-
 	public String getEmail() {
 		return email;
 	}
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
 	}
 
 }

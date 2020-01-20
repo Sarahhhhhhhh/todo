@@ -37,9 +37,38 @@ public class ToDoListController {
 		return new ResponseEntity<String>(mapper.writeValueAsString(service.getListById(id)), null, HttpStatus.OK);
 	}
 
+	@RequestMapping(value = "/lists", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<String> addList(@RequestBody ToDoList todolist) throws JsonProcessingException {
+		service.addList(todolist);
+		return new ResponseEntity<String>(mapper.writeValueAsString(service.getListsWithSameUser(todolist.getUser())),
+				null, HttpStatus.CREATED);
+	}
+
+	@RequestMapping(value = "/lists/{id}", method = RequestMethod.PUT, consumes = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<String> updateList(@RequestBody ToDoList todolist, @PathVariable("id") String id)
+			throws JsonProcessingException {
+		service.updateList(id, todolist);
+		return new ResponseEntity<String>(mapper.writeValueAsString(service.getListById(id)), null, HttpStatus.OK);
+	}
+
+	@RequestMapping(value = "/lists/{id}", method = RequestMethod.DELETE)
+	public ResponseEntity<String> deleteListById(@PathVariable("id") String id) throws JsonProcessingException {
+		ToDoList list = service.getListById(id);
+		service.deleteListById(id);
+		return new ResponseEntity<String>(mapper.writeValueAsString(service.getListsWithSameUser(list.getUser())), null,
+				HttpStatus.OK);
+	}
+
 	@RequestMapping(value = "/lists/{id}/tasks", method = RequestMethod.GET)
 	public ResponseEntity<String> getAllListTasks(@PathVariable("id") String id) throws JsonProcessingException {
 		return new ResponseEntity<String>(mapper.writeValueAsString(service.getListById(id).getTodos()), null,
+				HttpStatus.OK);
+	}
+
+	@RequestMapping(value = "/lists/{id}/tasks/{taskID}", method = RequestMethod.GET)
+	public ResponseEntity<String> getTaskById(@PathVariable("id") String listID, @PathVariable("taskID") int taskID)
+			throws JsonProcessingException {
+		return new ResponseEntity<String>(mapper.writeValueAsString(service.getListTaskById(listID, taskID)), null,
 				HttpStatus.OK);
 	}
 
@@ -54,43 +83,8 @@ public class ToDoListController {
 		service.deleteTask(listID, taskID);
 	}
 
-	@RequestMapping(value = "/lists/{id}/tasks/{taskID}", method = RequestMethod.GET)
-	public ResponseEntity<String> getTaskById(@PathVariable("id") String listID, @PathVariable("taskID") int taskID)
-			throws JsonProcessingException {
-		return new ResponseEntity<String>(mapper.writeValueAsString(service.getListTaskById(listID, taskID)), null,
-				HttpStatus.OK);
-	}
-
-	@RequestMapping(value = "/lists/{id}/tasks/{taskID}", method = RequestMethod.PUT)
-	public void updateTask(@PathVariable("id") String listID, @PathVariable("taskID") int taskID)
-			throws JsonProcessingException {
-		service.updateTaskText(listID, taskID);
-	}
-
 	@RequestMapping(value = "/{user}", method = RequestMethod.GET)
 	public Collection<ToDoList> getListsWithSameUser(@PathVariable("user") String user) {
 		return service.getListsWithSameUser(user);
-	}
-
-	@RequestMapping(value = "/lists/{id}", method = RequestMethod.DELETE)
-	public ResponseEntity<String> deleteListById(@PathVariable("id") String id) throws JsonProcessingException {
-		ToDoList list = service.getListById(id);
-		service.deleteListById(id);
-		return new ResponseEntity<String>(mapper.writeValueAsString(service.getListsWithSameUser(list.getUser())), null,
-				HttpStatus.OK);
-	}
-
-	@RequestMapping(value = "/lists", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<String> addList(@RequestBody ToDoList todolist) throws JsonProcessingException {
-		service.addList(todolist);
-		return new ResponseEntity<String>(mapper.writeValueAsString(service.getListsWithSameUser(todolist.getUser())),
-				null, HttpStatus.CREATED);
-	}
-
-	@RequestMapping(value = "/lists/{id}", method = RequestMethod.PUT, consumes = MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<String> updateList(@RequestBody ToDoList todolist, @PathVariable("id") String id)
-			throws JsonProcessingException {
-		service.updateList(id, todolist);
-		return new ResponseEntity<String>(mapper.writeValueAsString(service.getListById(id)), null, HttpStatus.OK);
 	}
 }

@@ -1,14 +1,18 @@
 package com.todo.model;
 
-public class ToDoTask {
+import org.springframework.data.annotation.Id;
 
+public class ToDoTask {
+	@Id
+	private String id;
 	private int taskID;
 	private String text;
 	private String date;
 	private boolean done;
-	
-	public ToDoTask() {}
-	
+
+	public ToDoTask() {
+	}
+
 	public ToDoTask(String text, int taskID) {
 		this.taskID = taskID;
 		this.text = text;
@@ -18,7 +22,7 @@ public class ToDoTask {
 	public String getDate() {
 		return date;
 	}
-	
+
 	public void setDate(String date) {
 		this.date = date;
 	}
@@ -26,7 +30,7 @@ public class ToDoTask {
 	public int getTaskID() {
 		return this.taskID;
 	}
-	
+
 	public void setTaskID(int taskID) {
 		this.taskID = taskID;
 	}

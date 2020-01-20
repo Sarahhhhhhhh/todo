@@ -2678,3 +2678,9 @@ org.eclipse.core.runtime.CoreException: Launch configuration UmServiceTest refer
 2020-01-20 19:48:04,407 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2020-01-20 19:48:04,407 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\smirkovic\Desktop\todo\backend\todo\src\main\resources
 2020-01-20 19:48:04,407 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\smirkovic\Desktop\todo\backend\todo\src\main\resources
+2020-01-20 19:48:04,408 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-01-20 19:48:04,408 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\smirkovic\Desktop\todo\backend\todo\src\test\resources
+2020-01-20 19:50:03,754 [Worker-64: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-01-20 19:50:03,755 [Worker-64: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\smirkovic\Desktop\todo\backend\todo\src\main\resources
+2020-01-20 19:50:03,755 [Worker-64: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\smirkovic\Desktop\todo\backend\todo\src\main\resources
+2020-01-20 19:50:03,756 [Worker-64: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.

@@ -10,39 +10,48 @@
 </div>
 
 <div *ngIf="loggedInUser">
-<table mat-table [dataSource]="listDataSource" class="mat-elevation-z8">
+<table mat-table [dataSource]="listDataSource" matSort class="mat-elevation-z8">
 
   <!--- Note that these columns can be defined in any order.
         The actual rendered columns are set as a property on the row definition" -->
 
   <!-- Position Column -->
   <ng-container matColumnDef="id">
-    <th mat-header-cell *matHeaderCellDef>ID </th>
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>ID </th>
     <td mat-cell *matCellDef="let element"> {{element.id}} </td>
   </ng-container>
 
   <!-- Name Column -->
   <ng-container matColumnDef="user">
-    <th mat-header-cell *matHeaderCellDef> User </th>
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> User </th>
     <td mat-cell *matCellDef="let element"> {{element.user}} </td>
   </ng-container>
 
   <!-- Weight Column -->
   <ng-container matColumnDef="title">
-    <th mat-header-cell *matHeaderCellDef> Title </th>
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Title </th>
     <td mat-cell *matCellDef="let element"> {{element.title}} </td>
   </ng-container>
 
   <!-- Symbol Column -->
   <ng-container matColumnDef="todos">
-    <th mat-header-cell *matHeaderCellDef> Todos </th>
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Todos </th>
     <td mat-cell *matCellDef="let element"> {{ displayTodos(element.todos) }} </td>
   </ng-container>
 
   <!-- Symbol Column -->
   <ng-container matColumnDef="description">
-    <th mat-header-cell *matHeaderCellDef> Description </th>
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Description </th>
     <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="action">
+    <th mat-header-cell *matHeaderCellDef> Action </th>
+    <td mat-cell *matCellDef="let element">
+      <button mat-button (click)="openTodoDialog(element.id)">Add todo</button>
+      <button mat-button (click)="openDeleteTodoDialog(element.id)">Delete todo</button>
+      <button mat-button (click)="openUpdateListDialog(element)">Update list</button>
+    </td>
   </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="listDisplayedColumns"></tr>
@@ -61,34 +70,6 @@
   <button mat-button (click)="createList()">Create list</button>
 
 </div>
-
-<div>
-  <p>Create todo</p>
-  <mat-form-field class="example-full-width">
-    <input matInput placeholder="Date" name="date" [(ngModel)]="todoElm.date">
-  </mat-form-field>
-  <mat-form-field class="example-full-width">
-    <input matInput placeholder="Done" name="done" [(ngModel)]="todoElm.done">
-  </mat-form-field>
-  <mat-form-field class="example-full-width">
-    <input matInput placeholder="Text" name="text" [(ngModel)]="todoElm.text">
-  </mat-form-field>
-  <mat-form-field class="example-full-width">
-    <input matInput placeholder="Add to list" [(ngModel)]="todoToList">
-  </mat-form-field>
-  <button mat-button (click)="createTodo()">Create task</button>
-</div>
-
-  <div>
-    <p>Delete todo</p>
-    <mat-form-field class="example-full-width">
-      <input matInput placeholder="ListId" name="deleteListId" [(ngModel)]="deleteListId">
-    </mat-form-field>
-    <mat-form-field class="example-full-width">
-      <input matInput placeholder="TodoId" name="deleteTodoId" [(ngModel)]="deleteTodoId">
-    </mat-form-field>
-    <button mat-button (click)="deleteTodo()">Delete todo</button>
-  </div>
 
 </div>
 <router-outlet></router-outlet>

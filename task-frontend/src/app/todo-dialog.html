@@ -1,0 +1,17 @@
+<h1 mat-dialog-title>Create todo</h1>
+<div mat-dialog-content>
+    <p>Create todo</p>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Text" name="text" [(ngModel)]="todoElm.text">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Date" name="date" [(ngModel)]="todoElm.date">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Done" name="done" [(ngModel)]="todoElm.done">
+    </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button (click)="createTodo()">Create todo</button>
+</div>

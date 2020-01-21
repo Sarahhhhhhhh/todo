@@ -1,0 +1,14 @@
+<h1 mat-dialog-title>Update list</h1>
+<div mat-dialog-content>
+    <p>Update list</p>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Title" name="title" [(ngModel)]="listElm.title">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Description" name="description" [(ngModel)]="listElm.description">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button (click)="updateList()">Update</button>
+</div>

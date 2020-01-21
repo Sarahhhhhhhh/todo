@@ -39,4 +39,10 @@ export class TodoService {
       return;
     });
   }
+
+  public updateList(listId: number, todoList: IListResponse): Promise<void> {
+    return this.http.put(environment.backendUrl + 'lists/' + listId, todoList).toPromise().then((resp: any) => {
+      return;
+    });
+  }
 }

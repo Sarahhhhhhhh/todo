@@ -1,0 +1,19 @@
+<div class="center">
+  <p>Register</p>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="First name" name="firstName" [(ngModel)]="user.name">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Last name" name="lastName" [(ngModel)]="user.lastName">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Email" name="email" [(ngModel)]="user.email">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Password" name="password" [(ngModel)]="user.password">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Retype password" name="passwordRetype" [(ngModel)]="user.passwordRetype">
+  </mat-form-field>
+  <button mat-button (click)="register()">Register</button>
+</div>

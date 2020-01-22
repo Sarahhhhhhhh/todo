@@ -27,7 +27,6 @@ public class UserService {
 			return user.get();
 		}
 		return null;
-
 	}
 
 	public HttpStatus addUser(User user) {

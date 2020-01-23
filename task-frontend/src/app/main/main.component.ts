@@ -17,7 +17,7 @@ import {Router} from '@angular/router';
 export class MainComponent implements OnInit {
   title = 'task-frontend';
   listDataSource: MatTableDataSource<IListResponse>;
-  listDisplayedColumns: string[] = ['id', 'user', 'title', 'todos', 'description', 'action'];
+  listDisplayedColumns: string[] = ['id', 'user', 'title', 'todos', 'description', 'listAction', 'todoAction'];
   listElm: IListResponse = {};
   loggedInUser: string;
   deleteListId: number;
@@ -36,7 +36,7 @@ export class MainComponent implements OnInit {
 
   async logout() {
     localStorage.removeItem('user');
-    this.loggedInUser = false;
+    this.loggedInUser = undefined;
   }
 
   async getLists(){
@@ -63,15 +63,21 @@ export class MainComponent implements OnInit {
     }
   }
 
-  displayTodos(todos: ITodoResponse[]): string {
-    return todos.map(todo => '[id:' + todo.taskID + ',text:' + todo.text + ']').join();
+  async deleteList(list: IListResponse){
+    try {
+      await this.todoService.deleteList(list.id);
+      await this.getLists();
+    } catch(err){
+      alert('Could not delete list');
+    }
   }
 
-  public openTodoDialog(todoToList){
+  public openTodoDialog(todoToList, todo?: ITodoResponse){
       const dialogRef = this.dialog.open(TodoDialog, {
         width: '350px',
         data: {
           todoToList,
+          todo,
         }
       });
 
@@ -149,6 +155,7 @@ export class UpdateListDialog {
   async updateList(){
     try{
       await this.todoService.updateList(this.listElm.id, this.listElm);
+      this.dialogRef.close();
     }catch(err){
       alert('Could not update list');
     }
@@ -161,19 +168,31 @@ export class UpdateListDialog {
 })
 export class TodoDialog {
   todoElm: ITodoResponse = {};
-
+  isUpdate = false;
   constructor(
     public dialogRef: MatDialogRef<TodoDialog>,
-    @Inject(MAT_DIALOG_DATA) public data: any, private todoService: TodoService) {}
+    @Inject(MAT_DIALOG_DATA) public data: any, private todoService: TodoService) {
+    if(this.data.todo){
+      this.todoElm = this.data.todo;
+      this.isUpdate = true;
+    }
+  }
 
   onNoClick(): void {
     this.dialogRef.close();
   }
 
   async createTodo(){
-    console.log(this.data);
-    await this.todoService.createTask(this.data.todoToList, this.todoElm);
-    this.dialogRef.close();
+    try{
+      if(!this.data.todo) {
+        await this.todoService.createTask(this.data.todoToList, this.todoElm);
+      } else {
+        await this.todoService.updateTodo(this.data.todoToList, this.todoElm);
+      }
+      this.dialogRef.close();
+    }catch(err){
+      alert('Error executing operation');
+    }
   }
 
 }

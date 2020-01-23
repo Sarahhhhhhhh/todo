@@ -51,12 +51,17 @@ public class ToDoListController {
 		return new ResponseEntity<String>(mapper.writeValueAsString(service.getListById(id)), null, HttpStatus.OK);
 	}
 
+	@RequestMapping(value = "/lists/{listID}/tasks/{taskID}", method = RequestMethod.PUT, consumes = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<?> updateTodo(@RequestBody ToDoTask todoTask, @PathVariable("taskID") Integer taskId,
+			@PathVariable("listID") String listId) throws JsonProcessingException {
+		service.updateTodo(todoTask, listId, taskId);
+		return new ResponseEntity(HttpStatus.OK);
+	}
+
 	@RequestMapping(value = "/lists/{id}", method = RequestMethod.DELETE)
-	public ResponseEntity<String> deleteListById(@PathVariable("id") String id) throws JsonProcessingException {
-		ToDoList list = service.getListById(id);
+	public ResponseEntity<?> deleteListById(@PathVariable("id") String id) throws JsonProcessingException {
 		service.deleteListById(id);
-		return new ResponseEntity<String>(mapper.writeValueAsString(service.getListsWithSameUser(list.getUser())), null,
-				HttpStatus.OK);
+		return new ResponseEntity(HttpStatus.OK);
 	}
 
 	@RequestMapping(value = "/lists/{id}/tasks", method = RequestMethod.GET)

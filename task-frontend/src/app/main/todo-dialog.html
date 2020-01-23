@@ -1,6 +1,6 @@
-<h1 mat-dialog-title>Create todo</h1>
+<h1 mat-dialog-title>{{isUpdate ? "Update todo" : "Create todo"}}</h1>
 <div mat-dialog-content>
-    <p>Create todo</p>
+    <p>{{isUpdate ? "Update todo" : "Create todo"}}</p>
     <mat-form-field class="example-full-width">
       <input matInput placeholder="Text" name="text" [(ngModel)]="todoElm.text">
     </mat-form-field>
@@ -13,5 +13,5 @@
 </div>
 <div mat-dialog-actions>
   <button mat-button (click)="onNoClick()">No Thanks</button>
-  <button mat-button (click)="createTodo()">Create todo</button>
+  <button mat-button (click)="createTodo()">{{isUpdate ? "Update todo" : "Create todo"}}</button>
 </div>

@@ -40,8 +40,20 @@ export class TodoService {
     });
   }
 
-  public updateList(listId: number, todoList: IListResponse): Promise<void> {
+  public updateList(listId: string, todoList: IListResponse): Promise<void> {
     return this.http.put(environment.backendUrl + 'lists/' + listId, todoList).toPromise().then((resp: any) => {
+      return;
+    });
+  }
+
+  public deleteList(listId: string): Promise<void> {
+    return this.http.delete(environment.backendUrl + 'lists/' + listId).toPromise().then((resp: any) => {
+      return;
+    });
+  }
+
+  public updateTodo(listId: string, todo: ITodoResponse): Promise<void> {
+    return this.http.put(environment.backendUrl + 'lists/' + listId + '/tasks/' + todo.taskID, todo).toPromise().then((resp: any) => {
       return;
     });
   }

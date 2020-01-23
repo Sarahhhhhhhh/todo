@@ -1,7 +1,7 @@
 import {ITodoResponse} from './todo.response';
 
 export interface IListResponse {
-  id?: number;
+  id?: string;
   user?: string;
   title?: string;
   todos?: ITodoResponse[];

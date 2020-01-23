@@ -53,6 +53,12 @@ public class ToDoListService {
 		this.todoListRepository.deleteById(id);
 	}
 
+	public void updateTodo(ToDoTask todo, String listId, Integer todoId) {
+		ToDoList list = this.todoListRepository.findById(listId).get();
+		list.getTodos().set(Integer.valueOf(todoId), todo);
+		this.todoListRepository.save(list);
+	}
+
 	public List<ToDoTask> getAllListtodos(String id) {
 		return this.todoListRepository.findById(id).get().getTodos();
 	}
